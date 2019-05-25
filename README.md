@@ -9,18 +9,10 @@ Olá visitante, aqui serão reunidos códigos, exemplos, gabaritos e materiais d
 
 Eles serão separados em pastas, seguindo o formato:
 
-```mermaid
-graph TD;
-	Tópico-->Referências;
-	Tópico-->Exemplos;
-	Tópico-->Exercícios;
-	Tópico-->Gabaritos;
-```
-
 > Referências: Links e materiais para estudo
+
 > Exemplos: Exemplos de aplicação do conteúdo apresentado
+
 > Exercícios: A fim de fixar o conteúdo
-> Gabaritos: Apenas para verificar respostas
 
-
-
+> Gabaritos: Contendo exemplos de respostas
