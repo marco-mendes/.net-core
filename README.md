@@ -9,10 +9,8 @@ Olá visitante, aqui serão reunidos códigos, exemplos, gabaritos e materiais d
 
 Eles serão separados em pastas, seguindo o formato:
 
-> Referências: Links e materiais para estudo
+> Preparação: Links e materiais para estudo prévio
 
-> Exemplos: Exemplos de aplicação do conteúdo apresentado
+> Laboratório: Aplicação do conteúdo apresentado
 
-> Exercícios: A fim de fixar o conteúdo
-
-> Gabaritos: Contendo exemplos de respostas
+> Aprofundamento: Mais sobre o conteúdo
