@@ -4,7 +4,7 @@ Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequ�
 
 | Conteúdo                                 | Sobre Preparação                                       | Laboratórios                                      |
 | ---------------------------------------- | ------------------------------------------------------ | ------------------------------------------------- |
-| Fundamentos do .NET Core                 | - [Guia do .NET Core](Preparação/Guia do .NET Core.md) | - [Console]([Console.md](Laboratório/Console.md)) |
+| Fundamentos do .NET Core                 | - [Guia do .NET Core](Preparação/Guia do .NET Core.md) | - [Console]([Console.md](Laboratorio/Console.md)) |
 | Conteinerização de Aplicativos .NET Core |                                                        |                                                   |
 | Testes de Unidade com xUnit              |                                                        |                                                   |
 | ASP.NET Core e APIs                      |                                                        |                                                   |
