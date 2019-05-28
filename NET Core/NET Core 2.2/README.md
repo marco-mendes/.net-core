@@ -6,7 +6,7 @@ Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequ�
 
 | Conteúdo                                 | Sobre Preparação                                             | Laboratórios                                      |
 | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| Fundamentos do .NET Core                 | - [Guia do .NET Core](Preparação/Guia_do_.NET_Core.md)       | - [Console]([Console.md](Laboratorio/Console.md)) |
+| Fundamentos do .NET Core                 | - [Guia do .NET Core](Preparação/Guia_do_.NET_Core.md)       | - [Console](Laboratório/Console.md) |
 | Conteinerização de Aplicativos .NET Core | - [Introdução sobre Docker](Preparação/Intro_Docker.md)<br />- [Docker e .NET Core](Preparação/Docker_E_NET.md) | - [Docker](Laboratório/Docker.md)                 |
 | Testes de Unidade com xUnit              | - [Testes de Unidade](Preparação/Testes_De_Unidade.md)       | - [xUnit](Laboratório/xUnit.md)                   |
 | ASP.NET Core e APIs                      |                                                              |                                                   |
