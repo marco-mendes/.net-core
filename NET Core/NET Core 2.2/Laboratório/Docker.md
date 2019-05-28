@@ -173,6 +173,7 @@ O próximo comando, `ENTRYPOINT`, informa ao docker para configurar o contêiner
 O arquivo final ficaria:
 
 ```dockerfile
+
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
 COPY app/bin/Release/netcoreapp2.2/publish/ app/
@@ -405,8 +406,31 @@ Use o comando `docker images` para ver uma lista de imagens instaladas.
 
 Agora que vimos como fazer a build manual e executar a aplicação internamente em um container, podemos passar para a build em vários estágios do Docker.
 
-Através dela, é possível utilizar a imagem base do SDK do .net 
+Através dela, é possível utilizar a imagem base do SDK do .net para realizar a build completa da aplicação e depois copiar o resultado para uma imagem runtime, mais leve e que permite a distribuição mais rápida.
 
+A build em vários estágios do docker permite a maior automatização da build e redução de variáveis de ambiente que podem afetar o processo de build e consequentemente quebar a execução.
 
+O procedimento embora pareça complicado, é deveras simples. Será necessário especificar uma imagem base para que possamos iniciar o processo de build e outra imagem para que possamos publicar nossa aplicação. Um exemplo de dockerfile é:
 
-mcr.microsoft.com/dotnet/core/runtime:2.2
+```dockerfile
+
+FROM microsoft/dotnet:2.2-sdk AS build-env
+WORKDIR /app
+
+# Copiar csproj e restaurar dependencias
+COPY *.csproj ./
+RUN dotnet restore
+
+# Cópia do código e Build da aplicacao
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build da imagem
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "myapp.dll"]
+
+```
+
+Assim, não é preciso gerar a build manualmente e depois incluí-la à imagem do runtime.
