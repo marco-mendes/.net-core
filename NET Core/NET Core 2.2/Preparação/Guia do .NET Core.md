@@ -102,3 +102,45 @@ Principais diferenças entre o .NET Core e o Mono:
 - **Plataformas** – O Mono dá suporte a várias plataformas e CPUs.
 - **Software Livre** – O Mono e o .NET Core usam a licença MIT e são projetos do .NET Foundation.
 - **Foco** – o principal foco do Mono nos últimos anos são as plataformas móveis, enquanto o .NET Core se concentra em cargas de trabalho de nuvem e da área de trabalho.
+
+
+
+
+
+
+
+## Instalação de pacotes Nuget
+
+##### Nome
+
+`dotnet add package` – adiciona uma referência de pacote a um arquivo de projeto.
+
+##### Opções
+
+```
+dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]
+```
+
+##### Descrição
+
+O comando `dotnet add package` fornece uma opção conveniente para adicionar uma referência de pacote a um arquivo de projeto. Depois de executar o comando, há uma verificação de compatibilidade para garantir que o pacote seja compatível com as estruturas do projeto. Se for aprovado na verificação, um elemento `<PackageReference>` será adicionado ao arquivo de projeto e [dotnet restore](https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-restore) será executada.
+
+**Exemplos de utilização**:
+
+- Adicionar um pacote NuGet `Newtonsoft.Json` ao projeto corrente:
+
+  ```console
+  dotnet add package Newtonsoft.Json
+  ```
+
+- Adicionar uma versão específica de um pacote a um projeto:
+
+  ```console
+  dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
+  ```
+
+- Adicionar um pacote usando uma fonte específica do NuGet:
+
+  ```console
+  dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
+  ```
