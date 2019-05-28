@@ -8,6 +8,8 @@ Os seguintes programas são requeridos para a execução completa de todos os pa
 
 - [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download/archives)
 
+- [GIT Client](https://git-scm.com/download/win)
+
   
 
 Além dos programas, para execução devida dos laboratórios do docker, são necessárias as imagens:
