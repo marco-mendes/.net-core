@@ -5,7 +5,7 @@ Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core,
 ## Pré-requisitos
 
 - [SDK do .NET Core 2.2](https://www.microsoft.com/net/download/core).
-- Um editor de texto ou de código de sua escolha. Recomendamos o VSCode, que pode ser baixado daqui https://code.visualstudio.com
+- - Um editor de texto ou de código de sua escolha. Recomendamos o VSCode, que pode ser baixado daqui [VSCode](https://code.visualstudio.com)
 
 ## Olá, Aplicativo de Console.
 
@@ -253,5 +253,82 @@ Arquivos individuais são adequados para programas avulsos simples, mas, se voc�
    377
    ```
 
-E pronto. Agora, é possível começar a usar os conceitos básicos aprendidos aqui para criar seus próprios programas.
 
+
+### Adicionando Pacotes - Utilizando bibliotecas
+
+------
+
+Nesta segunda parte de ampliação do programa, iremos utilizar um pacote disponível na biblioteca Nuget para ampliar as capacidades de parametrização do programa. Faremos uso do *Microsoft.Extensions.CommandLineUtils* que pode ser instalado através do comando:
+
+```
+dotnet add Microsoft.Extensions.CommandLineUtils
+```
+
+Abaixo há um exemplo de código em que são utilizados dois argumentos - um o nome do usuário e outro a quantidade de números da sequência que devem ser gerados - responsáveis por controlar a execução do programa.
+
+```C#
+using System;
+using Microsoft.Extensions.CommandLineUtils;
+
+namespace PrimeiroConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          var app = new CommandLineApplication();
+          app.Name = "Fibonacci como Argumento";
+          app.Description = ".NET Core console - Fibonacci e Argumentos";
+
+          app.HelpOption("-?|-h|--help");
+
+          var NameOption = app.Option("-n|--nome<Nome>",
+                                       "Nome do usuario",
+                                       CommandOptionType.SingleValue);
+          
+          var FibOption = app.Option("-f|--fib<Fibonacci>",
+                                       "Quantidade de Numeros",
+                                       CommandOptionType.SingleValue);
+
+          app.OnExecute(() => {
+            if (NameOption.HasValue()) {
+              Console.WriteLine("Seu nome eh: {0}", NameOption.Value());
+            }
+            if (FibOption.HasValue()) {
+              var generator = new FibonacciGenerator();
+              foreach (var digit in generator.Generate(System.Convert.ToInt32(FibOption.Value())))
+              {
+                Console.WriteLine(digit);
+              }
+            }
+            else {
+              app.ShowHint();
+            }
+
+            return 0;
+          });
+
+          app.Command("fibonacci", (command) => {
+            command.Description = "Uma descricao qualquer.";
+            command.HelpOption("-?|-h|--help");
+
+            command.OnExecute(() => {
+              Console.WriteLine("fibonacci finalizado.");
+              return 0;
+            });
+          });
+
+          app.Execute(args);
+        }
+    }
+}
+```
+
+No dotnet core, ao utilizar o comando `dotnet run` , é necessário utillizar `—` para separar os argumentos do programa e da ferramenta dotnet. Logo, um exemplo de chamada para o programa acima é algo do tipo:
+
+```
+dotnet run -- -n Console -f 30
+```
+
+Ao chamar o programa com o comando acima, serão impressos 30 números da sequência após a impressão do nome `Console`.
