@@ -1,6 +1,6 @@
 ### Ordem dos conteúdos
 
-A fim de facilitar a preparação dos ambientes, foram disponibilizados dois guias principais, um contendo os pré requisitos gerais (para a boa e completa execução dos laboratórios) e outro contendo pré requisitos informativos do .NET Core, que podem ser econtrados respectivamentes em  [Pré-requisitos_Gerais.md](Preparação/Pré-requisitos_Gerais.md)  e   [Pré-requisitos_para_.NET_Core_no_Windows.md](Preparação/Pré-requisitos_para_.NET_Core_no_Windows.md) .
+A fim de facilitar a preparação dos ambientes, foram disponibilizados dois guias principais, um contendo os pré requisitos gerais (para a boa e completa execução dos laboratórios) e outro contendo pré requisitos informativos do .NET Core, que podem ser econtrados respectivamentes em  [Pré-requisitos_Gerais.md](Preparação/Pré-requisitos_Gerais.md)  e   [Pré-requisitos_para_.NET_Core_no_Windows.md](Preparação/Pré-requisitos_para_.NET_Core_no_Windows.md) .
 
 Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequência:
 
