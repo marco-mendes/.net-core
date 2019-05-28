@@ -23,8 +23,6 @@ Instale os seguintes pré-requisitos:
 
 Se você estiver usando um SDK mais recente, como o 3.0, certifique-se de que seu aplicativo seja forçado a usar o SDK 2.2. Crie um arquivo chamado `global.json` no seu diretório de trabalho e cole o seguinte código json:
 
-JSONCopiar
-
 ```json
 {
   "sdk": {
@@ -39,15 +37,11 @@ Salve esse arquivo. A presença do arquivo forçará o .NET Core a usar a versã
 
 Você precisa de um aplicativo .NET Core que o contêiner do Docker irá executar. Abra seu terminal, crie um diretório de trabalho e insira-o. No diretório de trabalho, execute o seguinte comando para criar um novo projeto em um subdiretório denominado app:
 
-consoleCopiar
-
 ```console
 dotnet new console -o app -n myapp
 ```
 
 Esse comando cria um novo diretório chamado *app* e gera um aplicativo "Olá, Mundo". Você pode testar esse aplicativo para ver o que ele faz. Insira o diretório *app* e execute o comando `dotnet run`. Você verá a seguinte saída:
-
-consoleCopiar
 
 ```console
 > dotnet run
@@ -55,8 +49,6 @@ Hello World!
 ```
 
 O modelo padrão cria um aplicativo que imprime no terminal e, em seguida, sai. Neste tutorial, você usará um aplicativo que faz um loop indefinidamente. Abra o arquivo **Program.cs** em um editor de texto. Ele deve se parecer com o seguinte código:
-
-C#Copiar
 
 ```csharp
 using System;
@@ -74,8 +66,6 @@ namespace myapp
 ```
 
 Substitua o arquivo pelo seguinte código que conta os números a cada segundo:
-
-C#Copiar
 
 ```csharp
 using System;
@@ -100,8 +90,6 @@ namespace myapp
 ```
 
 Salve o arquivo e teste o programa novamente com `dotnet run`. Lembre-se de que esse aplicativo é executado indefinidamente.Use o comando de cancelamento Ctrl+C para interrompê-lo. Você verá a seguinte saída:
-
-consoleCopiar
 
 ```console
 > dotnet run
@@ -163,8 +151,6 @@ O comando `FROM` instrui o Docker a extrair a imagem marcada **2.2** do reposit�
 
 Salve o arquivo. No seu terminal, execute `docker build -t myimage .`, e o Docker processará cada linha no *Dockerfile*. O `.`no comando `docker build` instrui o docker a usar o diretório atual para encontrar um *Dockerfile*. Esse comando constrói a imagem e cria um repositório local chamado **myimage** que aponta para essa imagem. Após a conclusão desse comando, execute `docker images` para ver uma lista de imagens instaladas:
 
-consoleCopiar
-
 ```console
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
@@ -183,6 +169,16 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 O comando `COPY` informa ao Docker para copiar a pasta especificada em seu computador para uma pasta no contêiner. Nesse exemplo, a pasta **publish** é copiada para uma pasta chamada **app** no contêiner.
 
 O próximo comando, `ENTRYPOINT`, informa ao docker para configurar o contêiner para ser executado como um executável.Quando o contêiner é iniciado, o comando `ENTRYPOINT` é executado. Quando esse comando terminar, o contêiner será interrompido automaticamente.
+
+O arquivo final ficaria:
+
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+
+COPY app/bin/Release/netcoreapp2.2/publish/ app/
+ENTRYPOINT ["dotnet", "app/myapp.dll"]
+
+```
 
 Salve o arquivo. No seu terminal, execute `docker build -t myimage .` e, quando o comando terminar, execute `docker images`.
 
@@ -402,3 +398,15 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 Use o comando `docker images` para ver uma lista de imagens instaladas.
+
+
+
+## Builds em vários estágios
+
+Agora que vimos como fazer a build manual e executar a aplicação internamente em um container, podemos passar para a build em vários estágios do Docker.
+
+Através dela, é possível utilizar a imagem base do SDK do .net 
+
+
+
+mcr.microsoft.com/dotnet/core/runtime:2.2
