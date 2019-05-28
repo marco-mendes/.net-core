@@ -5,7 +5,7 @@ Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core,
 ## Pré-requisitos
 
 - [SDK do .NET Core 2.2](https://www.microsoft.com/net/download/core).
-- Um editor de texto ou de código de sua escolha.
+- Um editor de texto ou de código de sua escolha. Recomendamos o VSCOde, que pode ser baixado daqui https://code.visualstudio.com (https://code.visualstudio.com)
 
 ## Olá, Aplicativo de Console.
 
