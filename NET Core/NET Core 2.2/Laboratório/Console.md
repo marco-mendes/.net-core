@@ -262,7 +262,7 @@ Arquivos individuais são adequados para programas avulsos simples, mas, se voc�
 Nesta segunda parte de ampliação do programa, iremos utilizar um pacote disponível na biblioteca Nuget para ampliar as capacidades de parametrização do programa. Faremos uso do *Microsoft.Extensions.CommandLineUtils* que pode ser instalado através do comando:
 
 ```
-dotnet add Microsoft.Extensions.CommandLineUtils
+dotnet add package Microsoft.Extensions.CommandLineUtils
 ```
 
 Abaixo há um exemplo de código em que são utilizados dois argumentos - um o nome do usuário e outro a quantidade de números da sequência que devem ser gerados - responsáveis por controlar a execução do programa.
