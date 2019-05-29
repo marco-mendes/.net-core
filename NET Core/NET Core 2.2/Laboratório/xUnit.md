@@ -181,6 +181,7 @@ Agora temos que adicionar a referência ao pacote do PrimeService. Para isso, va
 ```
 cd ..
 dotnet add Terminal/Terminal.csproj reference PrimeService/PrimeService.csproj
+dotnet sln unit-testing-using-dotnet-test.sln add Terminal/Terminal.csproj
 ```
 
 Dessa forma, estaremos especificando que o projeto do Terminal faz referência ao projeto do PrimeService através da linha de comando.
