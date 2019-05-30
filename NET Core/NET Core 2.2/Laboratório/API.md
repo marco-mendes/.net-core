@@ -1,6 +1,6 @@
-## Visão geral
+## Laboratório de API
 
-Este tutorial cria a seguinte API:
+Este tutorial cria uma API com todos os componentes necessários para ser categorizada como CRUD:
 
 | API                   | Descrição                                 | Corpo da solicitação      | Corpo da resposta                    |
 | :-------------------- | :---------------------------------------- | :------------------------ | :----------------------------------- |
@@ -13,6 +13,10 @@ Este tutorial cria a seguinte API:
 O diagrama a seguir mostra o design do aplicativo.
 
 ![O cliente é representado por uma caixa à esquerda e envia uma solicitação e recebe uma resposta do aplicativo, uma caixa desenhada à direita.](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api/_static/architecture.png?view=aspnetcore-2.2)
+
+Este laboratório será um pouco diferente dos anteriores. A cada novo pedaço de código introduzido será necessário parar a execução e rodar novamente com o comando `dotnet run`. 
+
+A cada adição de método HTTP da API serão feitos testes para verificar seu funcionamento utilizando o Postman.
 
 ## Pré-requisitos
 
@@ -67,12 +71,7 @@ Para adicionar o modelo, vamos primeiro criar uma pasta chamada Models com o com
 
 ````sh
 mkdir Models
-cd Models
 ````
-
-Ou criar uma pasta através do Visual Studio Code.
-
-
 
 Agora, para criar o modelo, vamos criar um novo arquivo no VSCode:
 
