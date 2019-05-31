@@ -1,6 +1,6 @@
 ## Laboratório de API
 
-Este tutorial cria uma API com todos os componentes necessários para ser categorizada como CRUD:
+Este tutorial irá demonstrar como criar API mínima em ASP.NET Core com o ASP.NET Web API,  com todos os componentes necessários para ser categorizada como CRUD:
 
 | API                   | Descrição                                 | Corpo da solicitação      | Corpo da resposta                    |
 | :-------------------- | :---------------------------------------- | :------------------------ | :----------------------------------- |
