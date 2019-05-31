@@ -126,7 +126,6 @@ No ASP.NET Core, serviços como o contexto de BD precisam ser registrados no con
 Atualize *Startup.cs* com o seguinte código realçado:
 
 ```csharp
-// Unused usings removed
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
