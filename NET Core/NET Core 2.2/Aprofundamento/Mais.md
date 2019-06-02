@@ -20,7 +20,7 @@ Os códigos de status das respostas HTTP indicam se uma requisição HTTP foi co
 
 #### Sobre tipos de testes
 
-- Testes unitários
+- Testes unitários ou de unidade
   - *Testes unitários são executados sobre a menor parte testável de um software a fim de determinar se ela se comporta como o esperado.*
 - Testes de integração
   - *Um teste de integração verifica a comunicação e as interações entre os componentes a fim de identificar principalmente erros de interface e interação.*
