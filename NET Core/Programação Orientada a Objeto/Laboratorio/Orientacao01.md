@@ -1,6 +1,22 @@
-#### Exercícios Práticos sobre Orientação a Objeto - Parte 1
+#### Exercícios Práticos sobre Orientação por Objeto - Parte 1
 
 Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Construtores, Composição, Herança, Proteção e Interface.
+
+> Por padrão, pode ser criado uma solução ou um projeto, utilizando os comandos:
+>
+> dotnet new sln -o <nome da solucao>
+>
+> cd <nome da solucao>
+>
+> dotnet new console -o <nome do projeto>
+>
+> dotnet sln add <nome do projeto>
+>
+>
+> Por mais referências, veja os laboratórios antigos, como:
+>  [Console.md](../../NET Core 2.2/Laboratório/Console.md) e  [xUnit.md](../../NET Core 2.2/Laboratório/xUnit.md) 
+
+
 
 1. Analisando o ambiente de sua empresa, Cláudio percebeu que estava na hora de automatizar alguns aspectos, a fim de reduzir a quantidade de papel guardada em seus escaninhos. Ele precisa de uma organização de dados que permita configurar uma filial, os tipos de produtos com que aquela filial trabalha e seus funcionários. Para facilitar, anotamos alguns requisitos e demos nomes a algumas classes que você pode precisar em sua implementação.
 

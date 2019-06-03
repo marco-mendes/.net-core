@@ -1,4 +1,6 @@
-#### Exercícios Práticos sobre Orientação a Objeto - Parte 2
+#### Exercícios Práticos sobre Orientação por Objeto - Parte 2
+
+Continuando os módulos desenvolvidos nos exercícios práticos da parte 1.
 
 
 
