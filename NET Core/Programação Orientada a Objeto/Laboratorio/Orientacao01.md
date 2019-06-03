@@ -39,8 +39,8 @@ Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Constru
      - Regras de negócio:
        - Deve ter propriedades que a definam, seja endereço ou CNPJ;
        - Deve conter uma coleção de funcionários (Composição);
-       - Quando uma filial é criada, deve vir com alguns tipos de produto padrões e nenhum funcionário (Construtores);
-       - Deve conter uma coleção de tipos de produtos  (Composição).
+       - Deve conter uma coleção de tipos de produtos  (Composição);
+       - Quando uma filial é criada, deve vir com alguns tipos de produto padrões e nenhum funcionário (Construtores).
 
 
 
