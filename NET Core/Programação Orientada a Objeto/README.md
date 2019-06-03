@@ -10,7 +10,7 @@ Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequ�
 | Propriedades, Indexadores, Descartes, Genéricos e Iteradores | - [Propriedades](https://docs.microsoft.com/pt-br/dotnet/csharp/properties)<br />- [Indexadores](https://docs.microsoft.com/pt-br/dotnet/csharp/indexers)<br />- [Descartes](https://docs.microsoft.com/pt-br/dotnet/csharp/discards)<br />- [Genéricos](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/generics/)<br />- [Iteradores](https://docs.microsoft.com/pt-br/dotnet/csharp/iterators) | - [Orientação por Objetos 02](Laboratorio/Orientacao02.md) |
 | DDD                                                          | - [Sobre DDD](http://www.agileandart.com/2010/07/16/ddd-introducao-a-domain-driven-design/) |                                                            |
 
-**Laboratório Extra:** [Casos de teste](Laboratorio/Testes.md)
+**Laboratório Extra:** [Casos de teste - Exceções e Resultados Esperados](Laboratorio/Testes.md)
 
 
 
