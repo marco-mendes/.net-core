@@ -12,9 +12,8 @@ Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Constru
 >
 > dotnet sln add < nome do projeto >
 >
->
 > Por mais referências, veja os laboratórios antigos, como:
->  [Console.md](../../NET Core 2.2/Laboratório/Console.md) e  [xUnit.md](../../NET Core 2.2/Laboratório/xUnit.md) 
+> [Console.md](NET Core 2.2/Laboratório/Console.md) e  [xUnit.md](NET Core 2.2/Laboratório/xUnit.md) 
 
 
 
