@@ -28,17 +28,25 @@ Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Constru
 
 
 
-Uma parte do código já foi desenvolvida, mas sinta-se livre para alterá-la como desejar:
+Uma parte do código já foi desenvolvida (incluindo [Interfaces](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/interfaces/) e [Classes](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/classes)), mas sinta-se livre para alterá-la como desejar:
 
 ```C#
 enum TipoPessoa {Fisica, Juridica};
-class Pessoa {
-    // Definindo variáveis - privadas
+
+// Definindo interface
+interface IPessoa {
+    string Nome {get;set;}
+    string Endereco {get;set;}
+    string Identificador {get;set;}
+    TipoPessoa Tipo {get; set;}
+}
+
+// Implementando Interface
+class Pessoa : IPessoa {
     private string identificador, nome;
     private TipoPessoa tipo;
   	public string Endereco {get; set;}
 
-    // Definindo interfaces - públicas
     public string Nome {
         get {
             return this.nome;
@@ -52,7 +60,7 @@ class Pessoa {
             return this.tipo;
         }
         set {
-            // Verificando se tipo de pessoa passado é definido
+            // Verificando se tipo passado é definido
             if (Enum.IsDefined(typeof(TipoPessoa), value)) {
                 this.tipo = value;
             }
