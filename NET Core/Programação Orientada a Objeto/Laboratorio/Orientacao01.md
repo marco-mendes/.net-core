@@ -4,13 +4,13 @@ Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Constru
 
 > Por padrão, pode ser criado uma solução ou um projeto, utilizando os comandos:
 >
-> dotnet new sln -o <nome da solucao>
+> dotnet new sln -o < nome da solucao >
 >
-> cd <nome da solucao>
+> cd < nome da solucao >
 >
-> dotnet new console -o <nome do projeto>
+> dotnet new console -o < nome do projeto >
 >
-> dotnet sln add <nome do projeto>
+> dotnet sln add < nome do projeto >
 >
 >
 > Por mais referências, veja os laboratórios antigos, como:
