@@ -1,9 +1,14 @@
-### Introdução Sobre DDD
+### Introdução sobre o Desenho Dirigido por Domínios (DDD)
 
+O desenho dirigido por domínios é uma técnica de desenho OO que busca criar arquiteturas com grande extensibilidade, manutenibilidade e testabilidade. Ela foi desenvolvida para apoiar empresas na criação e manutenção de sistemas complexos, adaptativos e sujeitos a evolução continuada.
 
+Esse tutorial traz algumas ideias introdutórias a respeito, baseadas no excelente livro Domain Drive Design de Eric Evans.
+
+https://images-na.ssl-images-amazon.com/images/I/51OWGtzQLLL.jpg
+
+DDD Resumido (adaptado do livro do Eric Evans)
 
 ![1*qpHCIA7RDfW89KtSUXGJog](https://cdn-images-1.medium.com/max/800/1*qpHCIA7RDfW89KtSUXGJog.png)
-
 
 
 > 1. Camada de aplicação: responsável pelo projeto principal, pois é onde será desenvolvido os controladores e serviços da *API*. Tem a função de receber todas as requisições e direcioná-las a algum serviço para executar uma determinada ação. 
