@@ -17,3 +17,7 @@ Links úteis:
 - [VSCode - Criando Classes e Interfaces com C# Extensions](https://medium.com/@renato.groffe/net-core-visual-studio-code-criando-rapidamente-classes-e-interfaces-com-c-extensions-e73bad83e867)
 - [Design Patterns - 'Gang of Four' (GoF)](https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software)
 
+Para aprodundar:
+
+- [Não lançe exceptions no Domínio, use Notifications!](https://medium.com/tableless/n%C3%A3o-lance-exceptions-em-seu-dom%C3%ADnio-use-notifications-70b31f7148d3)
+
