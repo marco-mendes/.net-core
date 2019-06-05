@@ -19,7 +19,7 @@ Aqui veremos exercícios práticos relacionados aos conceitos de Classe, Constru
 
 1. Analisando o ambiente de sua empresa, Cláudio percebeu que estava na hora de automatizar alguns aspectos, a fim de reduzir a quantidade de papel guardada em seus escaninhos. Ele precisa de uma organização de dados que permita configurar uma filial, os tipos de produtos com que aquela filial trabalha e seus funcionários. Para facilitar, anotamos alguns requisitos e demos nomes a algumas classes que você pode precisar em sua implementação.
 
-   - Classe Pessoa (Classe)
+   - Classe Pessoa (Interface)
      - Regras de negócio:
        - Deve definir se é física ou jurídica;
        - Deve receber dados de uma pessoa, como endereço, nome e identificador.
