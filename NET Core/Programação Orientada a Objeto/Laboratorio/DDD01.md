@@ -16,8 +16,8 @@ Vamos explicar cada camada abaixo.
 
 > 1. Camada de aplicação: responsável pelo projeto principal. Aqui serão implementados os controladores e serviços da *API*. Tem a função de receber todas as requisições e direcioná-las a algum Service para executar uma determinada ação. 
 >    *Possui referências das camadas Service e Domain.*
-> 2. Camada de domínio: responsável pela implementação das classes/modelos, as quais serão mapeadas para o banco de dados, além de obter as declarações de interfaces, constantes, *DTOs* (*Data Transfer Object*) e *enums*.
-> 3. Camada de serviço: seria o “coração” do projeto, pois é nela que são implementadas todas as regras de negócio e todas as validações, antes de persistir os dados no banco de dados. 
+> 2. Camada de domínio: responsável pela implementação das classes/modelos e regras de negócio locais a essas classes.
+> 3. Camada de serviço: seria o “coração” do projeto, pois é nela que são implementadas fluxos de trabalho e regras globais ao sistema. Essa camada também usa o domínio para persistir informações contra os banco de dados. 
 >    *Possui referências das camadas Domain, Infra.Data e Infra.CrossCutting.*
 > 4. Camada de infraestrutura: é dividida em duas sub-camadas
 >    \- Data: realiza a persistência com o banco de dados, utilizando, ou não, algum *ORM*.
