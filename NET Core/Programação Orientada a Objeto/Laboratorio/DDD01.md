@@ -6,10 +6,13 @@ Esse tutorial traz algumas ideias introdutórias a respeito, baseadas no excelen
 
 ![Livro DDD](https://images-na.ssl-images-amazon.com/images/I/51OWGtzQLLL.jpg)
 
-DDD Resumido (adaptado do livro do Eric Evans)
+---
+
+O esquema conceitual básico do DDD é resumido na seguinte figura.
 
 ![1*qpHCIA7RDfW89KtSUXGJog](https://cdn-images-1.medium.com/max/800/1*qpHCIA7RDfW89KtSUXGJog.png)
 
+Vamos explicar cada camada abaixo.
 
 > 1. Camada de aplicação: responsável pelo projeto principal, pois é onde será desenvolvido os controladores e serviços da *API*. Tem a função de receber todas as requisições e direcioná-las a algum serviço para executar uma determinada ação. 
 >    *Possui referências das camadas Service e Domain.*
