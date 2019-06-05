@@ -4,7 +4,7 @@ O desenho dirigido por domínios é uma técnica de desenho OO que busca criar a
 
 Esse tutorial traz algumas ideias introdutórias a respeito, baseadas no excelente livro Domain Driven Design de Eric Evans.
 
-!Livro(https://images-na.ssl-images-amazon.com/images/I/51OWGtzQLLL.jpg)
+![Livro DDD](https://images-na.ssl-images-amazon.com/images/I/51OWGtzQLLL.jpg)
 
 DDD Resumido (adaptado do livro do Eric Evans)
 
