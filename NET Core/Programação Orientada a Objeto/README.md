@@ -11,14 +11,9 @@ Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequ�
 | Testes de Unidade em Sistemas OO | [xUnit](https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-with-dotnet-test) | [Casos de teste - Exceções e Resultados Esperados](Laboratorio/Testes.md) |
 | DDD - Domain Driven Design   | - [Conceitos sobre DDD](http://www.agileandart.com/2010/07/16/ddd-introducao-a-domain-driven-design/) | [- Introdução do DDD ](Laboratorio/DDD01.md)<br />- [Criação de uma hieraquia de produtos com DDD](Laboratorio/DDD-Extensao.md) |
 
-**Laboratório Extra:** [Casos de teste - Exceções e Resultados Esperados](Laboratorio/Testes.md)
-
-
-
-
 
 Links úteis:
 
 - [VSCode - Criando Classes e Interfaces com C# Extensions](https://medium.com/@renato.groffe/net-core-visual-studio-code-criando-rapidamente-classes-e-interfaces-com-c-extensions-e73bad83e867)
-- [Design Patterns - 'A Gangue dos Quarto' (GoF)](https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software)
+- [Design Patterns - 'Gang of Four' (GoF)](https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software)
 
