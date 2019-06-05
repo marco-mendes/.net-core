@@ -440,7 +440,7 @@ No projeto, criaremos duas pastas, `Services` responsável pelos serviços, cont
 mkdir Validators Services
 ```
 
-Na pasta *Validators*, cria-se uma classe chamada *UsuarioValidator*, a qual será utilizada para validar toda a entidade de usuário.
+Na pasta *Validators*, cria-se uma classe chamada *UserValidator*, a qual será utilizada para validar toda a entidade de usuário.
 
 ```c#
 using System;
