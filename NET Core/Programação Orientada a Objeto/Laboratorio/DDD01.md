@@ -295,7 +295,7 @@ namespace DDD.Infra.Data.Context
         {
             // Utilizando um servidor SQLite local. Aqui poderíamos configurar qualquer outro banco de dados.
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFProviders.InMemory;Trusted_Connection=True;ConnectRetryCount=0");
+                optionsBuilder.optionsBuilder.UseSqlite("DataSource=app.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
