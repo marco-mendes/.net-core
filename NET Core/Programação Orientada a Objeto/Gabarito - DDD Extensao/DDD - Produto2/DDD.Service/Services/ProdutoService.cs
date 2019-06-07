@@ -20,5 +20,9 @@ namespace DDD.Service.Services
         {
             return _produtoRepository.GetAll();
         }
+         public IEnumerable<Produto> Search(Func<Produto, bool> condition)
+        {
+            return _produtoRepository.Search(condition);
+        }
     }
 }
