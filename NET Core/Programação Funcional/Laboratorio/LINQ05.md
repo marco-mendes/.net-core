@@ -2,7 +2,7 @@
 
 ---
 
-Para este exercício e os próximos, na pasta utils, há um arquivo [Program.cs](utils/Pogram.cs) com a definição de uma classe Produto com um array já populado com valores gerados automaticamente, para facilitar a implementação e testes.
+Para este exercício e os próximos, na pasta utils, há um arquivo [Program.cs](https://github.com/corelioBH/.net-core/blob/master/NET%20Core/Programa%C3%A7%C3%A3o%20Funcional/Laboratorio/utils/Program.cs) com a definição de uma classe Produto com um array já populado com valores gerados automaticamente, para facilitar a implementação e testes.
 
 ### 1. Criar um grupo aninhado
 
@@ -41,7 +41,7 @@ public void QueryNestedGroups()
 
 **Exercício**
 
-A tarefa então é: dado o conjunto de dados no arquivo [Program.cs](utils/Pogram.cs), crie uma query que agrupe os produtos dados através do ID da categoria e então pelo Ano da data de validade.
+A tarefa então é: dado o conjunto de dados no arquivo [Program.cs](https://github.com/corelioBH/.net-core/blob/master/NET%20Core/Programa%C3%A7%C3%A3o%20Funcional/Laboratorio/utils/Program.cs), crie uma query que agrupe os produtos dados através do ID da categoria e então pelo Ano da data de validade.
 
 
 
@@ -76,7 +76,7 @@ public void QueryMaxUsingMethodSyntax()
 
 **Exercício**
 
-Dado o mesmo array de produtos do [Program.cs](utils/Pogram.cs), agora vamos realizar um agrupamento por categoria e então buscar o preço do produto mais caro da categoria, o mais barato e finalmente a média.
+Dado o mesmo array de produtos do [Program.cs](https://github.com/corelioBH/.net-core/blob/master/NET%20Core/Programa%C3%A7%C3%A3o%20Funcional/Laboratorio/utils/Program.cs), agora vamos realizar um agrupamento por categoria e então buscar o preço do produto mais caro da categoria, o mais barato e finalmente a média.
 
 
 
@@ -108,5 +108,5 @@ Um exemplo de uma função que busca por ID é mostrada abaixo:
 
 **Exercício**
 
-Dado o mesmo array de produtos do [Program.cs](utils/Pogram.cs) e com base no exemplo acima, vamos realizar uma busca no array onde buscamos produtos com categorias {5,6,7}.
+Dado o mesmo array de produtos do [Program.cs](https://github.com/corelioBH/.net-core/blob/master/NET%20Core/Programa%C3%A7%C3%A3o%20Funcional/Laboratorio/utils/Program.cs) e com base no exemplo acima, vamos realizar uma busca no array onde buscamos produtos com categorias {5,6,7}.
 
