@@ -21,3 +21,4 @@ Para aprodundar:
 
 - [Não lançe exceptions no Domínio, use Notifications!](https://medium.com/tableless/n%C3%A3o-lance-exceptions-em-seu-dom%C3%ADnio-use-notifications-70b31f7148d3)
 
+- [Trabalhando com Tipos Complexos no EF Core](https://www.eduardopires.net.br/2018/01/trabalhando-com-tipos-complexos-no-ef-core/)
