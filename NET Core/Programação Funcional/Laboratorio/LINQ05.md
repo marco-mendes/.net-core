@@ -76,7 +76,9 @@ public void QueryMaxUsingMethodSyntax()
 
 **Exercício**
 
-Dado o mesmo array de produtos do [Program.cs](utils/Pogram.cs), agora vamos realizar um agrupamento por categoria e então buscar somente os produtos com preços superiores a 5.
+Dado o mesmo array de produtos do [Program.cs](utils/Pogram.cs), agora vamos realizar um agrupamento por categoria e então buscar o preço do produto mais caro da categoria, o mais barato e finalmente a média.
+
+
 
 
 
