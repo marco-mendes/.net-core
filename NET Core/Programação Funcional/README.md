@@ -1,5 +1,3 @@
-https://docs.microsoft.com/pt-br/dotnet/csharp/linq/
-
 ### Ordem dos conteúdos
 
 Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequência:
