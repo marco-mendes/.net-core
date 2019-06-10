@@ -22,7 +22,7 @@ O CRUD completo de Categoria e Fabricante é feito naturalmente pelo `BaseServic
 
 O ponto do exercício então é criar um repositório e serviço de produto, que dado um Produto, um Array de Categorias e um Fabricante, deve relacionar todos.
 
-
+Para 
 
 ---
 
