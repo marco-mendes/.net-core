@@ -32,7 +32,7 @@ Links úteis:
 
   
 
-Para aprodundar:
+Para aprofundar:
 
 - [Programação Funcional](https://en.wikipedia.org/wiki/Monad_(functional_programming))
 
