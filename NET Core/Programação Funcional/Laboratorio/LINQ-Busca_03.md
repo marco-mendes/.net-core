@@ -29,7 +29,8 @@ public class FabricanteMap : IEntityTypeConfiguration<Fabricante>
         .IsRequired()
         .HasColumnName("Name");
 
-      builder.HasMany(c => c.Produtos);
+      builder.HasMany(c => c.Produtos).WithOne(e => e.Fabricante)
+            .HasForeignKey("FabricanteId");
       
       builder.Property(c => c.Codigo)
         .IsRequired()
