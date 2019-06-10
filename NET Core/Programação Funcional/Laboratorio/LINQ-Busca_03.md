@@ -1,4 +1,4 @@
-### Criando Relações - Parte 2/4
+### Criando Relações - Parte 2/5
 
 Nesta parte vamos criar o mapeamento das nossas entidades, utilizando do EF Core para automatizar a criação de campos. O escopo aqui é diretamente ligado à infraestrutura, então é recomendado que os passos aqui sejam feitos no projeto Infra.Data.
 

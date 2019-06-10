@@ -11,6 +11,15 @@ Para facilitar a ordem dos estudos e apresentações, o módulo seguirá a sequ�
 | Programação Assíncrona                                       | - [Async](https://docs.microsoft.com/pt-br/dotnet/csharp/async)<br />- [Programação Assíncrona](https://docs.microsoft.com/pt-br/dotnet/framework/data/adonet/asynchronous-programming) |                                                              |
 | Padrões e Mônas                                              | - [Monas e C#](https://mikhail.io/2018/07/monads-explained-in-csharp-again/) |                                                              |
 
+Exercícios Complementares:
+
+- [LINQ-Busca_01.md](Laboratorio/LINQ-Busca_01.md) 
+- [LINQ-Busca_02.md](Laboratorio/LINQ-Busca_02.md) 
+- [LINQ-Busca_03.md](Laboratorio/LINQ-Busca_03.md)  
+- [LINQ-Busca_04.md](Laboratorio/LINQ-Busca_04.md) 
+- [LINQ-Busca_05.md](Laboratorio/LINQ-Busca_05.md) 
+- [LINQ-Busca_06.md](Laboratorio/LINQ-Busca_06.md) 
+
 
 
 Links úteis:

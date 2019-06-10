@@ -27,11 +27,12 @@ O que faremos então:
 - Entender um pouco sobre EF Core e suas migrações
 
   - Exemplificar como o EF Core pode automatizar as relações em banco de dados
-  - Executar migrações iniciais
-  - Modificar o código e atualizar o estado do banco
-  - Criar um script para atualizar o arquivo do banco de dados na aplicação
 
-  
+  - Executar migrações iniciais
+
+  - Modificar o código e atualizar o estado do banco
+
+    
 
 - Montar uma API para retorno de Entidades
 

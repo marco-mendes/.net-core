@@ -1,4 +1,4 @@
-### Criando Relações - Parte 1/4
+### Criando Relações - Parte 1/5
 
 Para aprofundar um pouco mais no quesito de buscas de modelos em banco de dados utilizando LINQ, vamos primeiro estabelecer entidades e relações na nossa aplicação. O escopo aqui é diretamente ligado ao Domínio, então é recomendado que os passos aqui sejam feitos no projeto Domain.
 
