@@ -22,6 +22,7 @@ namespace DDD.Service.Validators
             RuleFor(c => c.BirthDate)
                 .NotEmpty().WithMessage("Is necessary to inform the birth date.")
                 .NotNull().WithMessage("Is necessary to inform the birth date.");
+                
 
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Is necessary to inform the name.")

@@ -1,2 +1,2 @@
 # .net-core
-Exercícios e Laboratórios sobre .NET Core
+Este repositório apresenta exercícios, tutoriais e laboratórios sobre .NET Core. 
