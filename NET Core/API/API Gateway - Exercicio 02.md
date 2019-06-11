@@ -81,7 +81,7 @@ Uma outra funcionalidade interessante de API Gateways é o controle do limite de
 
 Você pode examinar uma documentação mais extensa de como realizar essas parametrização [aqui](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html) e [aqui](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-rate-limiting-part-four/).
 
-A partir dessas informações, implemente esse padrão no seu código fonte.
+**A partir dessas informações, implemente um controle de chamadas de requisições no seu código fonte.**
 
 ---
 
@@ -113,4 +113,4 @@ Por exemplo, a configuração abaixo especifica que a rota `post\{postId}` será
 }
 ```
 
-Leia as informações de parametrização [aqui disponíveis](https://ocelot.readthedocs.io/en/latest/features/loadbalancer.html) e incorpore essa capacidade na sua aplicação.
+**Leia as informações de parametrização [aqui disponíveis](https://ocelot.readthedocs.io/en/latest/features/loadbalancer.html) e incorpore essa capacidade na sua aplicação.**
