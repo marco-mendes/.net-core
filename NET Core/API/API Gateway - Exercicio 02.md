@@ -8,10 +8,7 @@ QoS - Qualidade do serviço
 
 Você pode criar aspectos de qualidade de serviço para a chamada de APIs com o padrão de projeto **CircuitBreaker**. 
 
-O que é um Circuit Breaker (Disjuntor)?
-
----
-
+Mas o que é um Circuit Breaker (Disjuntor)? 
 É comum que os sistemas de software façam chamadas remotas para o software em execução em diferentes processos, provavelmente em máquinas diferentes em uma rede. Uma das grandes diferenças entre chamadas na memória e chamadas remotas é que as chamadas remotas podem falhar ou travar sem uma resposta até que um limite de tempo limite seja atingido. O que é pior se você tiver muitos chamadores em um fornecedor que não responde, então você pode ficar sem recursos críticos, levando a falhas em cascata em vários sistemas. Em seu excelente livro, Release It, Michael Nygard popularizou o padrão Disjuntor para evitar esse tipo de cascata catastrófica.
 
 A ideia básica por trás do disjuntor é muito simples. Você envolve uma chamada de função protegida em um objeto de disjuntor, que monitora falhas. Uma vez que as falhas atinjam um certo limite, o disjuntor desarma, e todas as outras chamadas para o disjuntor retornam com um erro, sem que a chamada protegida seja feita. Normalmente, você também vai querer algum tipo de alerta de monitor caso o disjuntor desarme.
@@ -117,4 +114,3 @@ Por exemplo, a configuração abaixo especifica que a rota `post\{postId}` será
 ```
 
 Leia as informações de parametrização [aqui disponíveis](https://ocelot.readthedocs.io/en/latest/features/loadbalancer.html) e incorpore essa capacidade na sua aplicação.
-
