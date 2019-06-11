@@ -65,8 +65,7 @@ public ActionResult<IEnumerable<string>> Get()
 [HttpGet]
 public ActionResult<IEnumerable<string>> Get()
 {
-    return new string[] { "Produto 1 do serviço de catálogo", 
-													"Produto 2 do serviço do catálogo" };
+    return new string[] { "Produto 1 do serviço de catálogo", "Produto 2 do serviço do catálogo" };
 }
 ```
 
