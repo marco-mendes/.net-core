@@ -99,8 +99,8 @@ Todo método de ação pública nos controladores pode ser testado da interface 
 
 Há três componentes principais bo Swashbuckle:
 
-- [Swashbuckle.AspNetCore.Swagger](https://www.nuget.org/packages/Swashbuckle.AspNetCore.Swagger/): um modelo de objeto e um middleware do Swagger para expor objetos `SwaggerDocument` como pontos de extremidade JSON.
-- [Swashbuckle.AspNetCore.SwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore.SwaggerGen/): um gerador do Swagger cria objetos `SwaggerDocument` diretamente de modelos, controladores e rotas. Normalmente, ele é combinado com o middleware de ponto de extremidade do Swagger para expor automaticamente o JSON do Swagger.
+- [Swashbuckle.AspNetCore.Swagger](https://www.nuget.org/packages/Swashbuckle.AspNetCore.Swagger/): um modelo de objeto e um middleware do Swagger para expor objetos `SwaggerDocument` como rotas JSON.
+- [Swashbuckle.AspNetCore.SwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore.SwaggerGen/): um gerador do Swagger cria objetos `SwaggerDocument` diretamente de modelos, controladores e rotas. Normalmente, ele é combinado com o middleware da rota do Swagger para expor automaticamente o JSON do Swagger.
 - [Swashbuckle.AspNetCore.SwaggerUI](https://www.nuget.org/packages/Swashbuckle.AspNetCore.SwaggerUI/): uma versão incorporada da ferramenta de interface do usuário do Swagger. Ele interpreta o JSON do Swagger para criar uma experiência avançada e personalizável para descrever a funcionalidade da API Web. Ela inclui o agente de teste interno para os métodos públicos.
 
 Vamos gerar um projeto mínimo de API com o seguinte comando,
@@ -164,7 +164,203 @@ public void Configure(IApplicationBuilder app)
 
 A chamada do método `UseSwaggerUI` precedente habilita o [middleware de arquivos estáticos](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/static-files?view=aspnetcore-2.2). Se você estiver direcionando ao .NET Framework ou ao .NET Core 1.x, adicione o pacote NuGet [Microsoft.AspNetCore.StaticFiles](https://www.nuget.org/packages/Microsoft.AspNetCore.StaticFiles/) ao projeto.
 
-Inicie o aplicativo e navegue até `http://localhost:<port>/swagger/v1/swagger.json`. O documento gerado que descreve os pontos de extremidade é exibido conforme é mostrado na [Especificação do Swagger (swagger.json)](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2#swagger-specification-swaggerjson).
+Inicie o aplicativo e navegue até `http://localhost:<port>/swagger/v1/swagger.json`. O documento gerado que descreve as rotas é exibido conforme é mostrado na [Especificação do Swagger (swagger.json)] apresentado no começo desse tutorial.
 
 A interface do usuário do Swagger pode ser encontrada em `http://localhost:<port>/swagger`. Explore a API por meio da interface do usuário do Swagger e incorpore-a em outros programas.
 
+## Personalização e Extensão da Interface do Swagger
+
+O Swagger fornece opções para documentar o modelo de objeto e personalizar a interface do usuário para corresponder ao seu tema.
+
+### Descrição e informações da API
+
+A ação de configuração passada para o método `AddSwaggerGen` adiciona informações como o autor, a licença e a descrição. Para isso, adicione o trecho de código abaixo no método ConfigureServices. 
+
+```c#
+// Register the Swagger generator, defining 1 or more Swagger documents
+services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Info
+    {
+        Version = "v1",
+        Title = "ToDo API",
+        Description = "Um exemoplo simples de ASP.NET Core Web API",
+        TermsOfService = "None",
+        Contact = new Contact
+        {
+            Name = "Shayne Boyer",
+            Email = string.Empty,
+            Url = "https://twitter.com/spboyer"
+        },
+        License = new License
+        {
+            Name = "Use under LICX",
+            Url = "https://example.com/license"
+        }
+    });
+});
+```
+
+
+
+## Enriquecimento da documentação para as rotas de API
+
+Adicionar comentários de barra tripla a uma ação aprimora a interface do usuário do Swagger adicionando a descrição ao cabeçalho da seção. Adicione um elemento [](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/xmldoc/summary) acima da ação `Delete`conforme código abaixo.
+
+```c#
+/// <summary>
+/// Deletes a specific TodoItem.
+/// </summary>
+/// <param name="id"></param>        
+[HttpDelete("{id}")]
+public IActionResult Delete(long id)
+{
+    var todo = _context.TodoItems.Find(id);
+
+    if (todo == null)
+    {
+        return NotFound();
+    }
+
+    _context.TodoItems.Remove(todo);
+    _context.SaveChanges();
+
+    return NoContent();
+}
+```
+
+A interface do usuário do Swagger exibe o texto interno do elemento `<summary>` do código anterior:
+
+![A interface do usuário do Swagger, mostrando o comentário XML 'Exclui um TodoItem específico'.](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/web-api-help-pages-using-swagger/_static/triple-slash-comments.png?view=aspnetcore-2.2)
+
+
+
+A interface do usuário é controlada pelo esquema JSON gerado:
+
+```json
+"delete": {
+    "tags": [
+        "Todo"
+    ],
+    "summary": "Deletes a specific TodoItem.",
+    "operationId": "ApiTodoByIdDelete",
+    "consumes": [],
+    "produces": [],
+    "parameters": [
+        {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        }
+    ],
+    "responses": {
+        "200": {
+            "description": "Success"
+        }
+    }
+}
+```
+
+Adicione um elemento [remarks](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/xmldoc/remarks) na documentação do método da ação `Create`. Ele complementa as informações especificadas no elemento `<summary>` e fornece uma interface de usuário do Swagger mais robusta. O conteúdo do elemento `<remarks>` pode consistir em texto, JSON ou XML.
+
+```c#
+/// <summary>
+/// Creates a TodoItem.
+/// </summary>
+/// <remarks>
+/// Sample request:
+///
+///     POST /Todo
+///     {
+///        "id": 1,
+///        "name": "Item1",
+///        "isComplete": true
+///     }
+///
+/// </remarks>
+/// <param name="item"></param>
+/// <returns>A newly created TodoItem</returns>
+/// <response code="201">Returns the newly created item</response>
+/// <response code="400">If the item is null</response>            
+[HttpPost]
+[ProducesResponseType(201)]
+[ProducesResponseType(400)]
+public ActionResult<TodoItem> Create(TodoItem item)
+{
+    _context.TodoItems.Add(item);
+    _context.SaveChanges();
+
+    return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
+}
+```
+
+Observe os aprimoramentos da interface do usuário com esses comentários adicionais.
+
+![Interface do usuário do Swagger com comentários adicionais mostrados](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/web-api-help-pages-using-swagger/_static/xml-comments-extended.png?view=aspnetcore-2.2)
+
+
+
+Adicione o atributo `[Produces("application/json")]` ao controlador da API. Sua finalidade é declarar que as ações do controlador permitem o tipo de conteúdo de resposta *application/json*:
+
+```c#
+[Produces("application/json")]
+[Route("api/[controller]")]
+[ApiController]
+public class TodoController : ControllerBase
+{
+    private readonly TodoContext _context;
+```
+
+
+
+A lista suspensa **Tipo de Conteúdo de Resposta** seleciona esse tipo de conteúdo como o padrão para ações GET do controlador:
+
+![Interface do usuário do Swagger com o tipo de conteúdo de resposta padrão](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/web-api-help-pages-using-swagger/_static/json-response-content-type.png?view=aspnetcore-2.2)
+
+À medida que aumenta o uso de anotações de dados na API Web, a interface do usuário e as páginas de ajuda da API se tornam mais descritivas e úteis.
+
+Os desenvolvedores que usam uma API Web estão mais preocupados com o que é retornado—, especificamente, os tipos de resposta e os códigos de erro (se eles não forem padrão). Os tipos de resposta e os códigos de erro são indicados nos comentários XML e nas anotações de dados.
+
+A ação `Create` retorna um código de status HTTP 201 em caso de sucesso. Um código de status HTTP 400 é retornado quando o corpo da solicitação postada é nulo. Sem a documentação adequada na interface do usuário do Swagger, o consumidor não tem conhecimento desses resultados esperados. Corrija esse problema adicionando as linhas realçadas no exemplo a seguir:
+
+```c#
+/// <summary>
+/// Creates a TodoItem.
+/// </summary>
+/// <remarks>
+/// Sample request:
+///
+///     POST /Todo
+///     {
+///        "id": 1,
+///        "name": "Item1",
+///        "isComplete": true
+///     }
+///
+/// </remarks>
+/// <param name="item"></param>
+/// <returns>A newly created TodoItem</returns>
+/// <response code="201">Returns the newly created item</response>
+/// <response code="400">If the item is null</response>            
+[HttpPost]
+[ProducesResponseType(201)]
+[ProducesResponseType(400)]
+public ActionResult<TodoItem> Create(TodoItem item)
+{
+    _context.TodoItems.Add(item);
+    _context.SaveChanges();
+
+    return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
+}
+```
+
+
+
+A interface do usuário do Swagger agora documenta claramente os códigos de resposta HTTP esperados:
+
+![A interface do usuário do Swagger mostra a descrição da classe de resposta POST, 'Retorna o item de tarefa pendente recém-criado' e '400 – se o item for nulo' para o código de status e o motivo em Mensagens de Resposta](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/web-api-help-pages-using-swagger/_static/data-annotations-response-types.png?view=aspnetcore-2.2)
+
+Esses são alguns exemplos de personalização. Você pode explorar e conhecer muito mais exemplos [aqui](https://codingsight.com/swashbuckle-swagger-configuration-for-webapi/).
