@@ -2,7 +2,7 @@ Tutorial sobre o uso de GraphQL
 
 ## GraphQL - LInguagem de Queries sobre HTTP
 
-O GraphQL é uma linguagem de consulta de API desenhadapara executar consultas usando um sistema de tipos que você define para seus dados. Pense que é uma espécie de SQL para criar APIs HTTP. Ela foi pelo Facebook em 2012 e três anos depois (2015) em um evento sobre React foi liberado para a comunidade. O GraphQL não está vinculado a nenhum banco de dados ou mecanismo de armazenamento específico.
+O GraphQL é uma linguagem de criação de APIs desenhada para executar comandos HTTP usando um sistema de tipos que você define para seus dados. Pense que é uma espécie de SQL para manipular APIs HTTP. Ela foi pelo Facebook em 2012 e três anos depois (2015) em um evento sobre React foi liberado para a comunidade. O GraphQL não está vinculado a nenhum banco de dados ou mecanismo de armazenamento específico.
 
 Um serviço GraphQL é criado definindo tipos e campos nesses tipos e, em seguida, fornecendo funções para cada campo em cada tipo. Por exemplo, um serviço GraphQL que nos diz quem é o usuário logado (eu) e também o nome desse usuário pode ser algo como isto:
 
