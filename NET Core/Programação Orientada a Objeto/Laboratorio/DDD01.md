@@ -41,7 +41,7 @@ Com a solução criada, vamos adicionar o primeiro projeto, responsável por exp
 
 ```sh
 dotnet new webapi -o DDD.Application 
-netcoreapp2.2
+
 
 # E claro, além de criar, vamos referencià-la também à nossa solução, com o comando
 dotnet sln DDD.sln add DDD.Application/DDD.Application.csproj
