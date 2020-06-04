@@ -40,7 +40,8 @@ Com a solução criada, vamos adicionar o primeiro projeto, responsável por exp
 > Esta camada será complementada ao final do laboratório, expondo os serviços criados ao decorrer da prática para o mundo externo.
 
 ```sh
-dotnet new webapi -o DDD.Application -f netcoreapp2.2
+dotnet new webapi -o DDD.Application 
+netcoreapp2.2
 
 # E claro, além de criar, vamos referencià-la também à nossa solução, com o comando
 dotnet sln DDD.sln add DDD.Application/DDD.Application.csproj
@@ -79,7 +80,7 @@ A camada `domain` é do tipo biblioteca, ou seja, ela não se transforma em um b
 Para criá-la, vamos executar o comando `dotnet new` passando como tipo `classlib` e output `DDD.Domain`, para facilitar a identificação.
 
 ```sh
-dotnet new classlib -o DDD.Domain -f netcoreapp2.2
+dotnet new classlib -o DDD.Domain
 
 # E claro, além de criar, vamos referencià-la também à nossa solução, com o comando
 dotnet sln DDD.sln add DDD.Domain/DDD.Domain.csproj
@@ -247,7 +248,7 @@ Essa camada será responsável por conectar ao banco de dados, no caso será uti
 # Necessário executar na pasta raiz da solução
 
 
-dotnet new classlib -o DDD.Infra.Data -f netcoreapp2.2
+dotnet new classlib -o DDD.Infra.Data
 
 # E claro, além de criar, vamos referencià-la também à nossa solução, com o comando
 dotnet sln DDD.sln add DDD.Infra.Data/DDD.Infra.Data.csproj
@@ -415,7 +416,7 @@ Essa camada será responsável por todas as regras de negócio e validações ne
 # Necessário executar na pasta raiz da solução
 
 
-dotnet new classlib -o DDD.Service -f netcoreapp2.2
+dotnet new classlib -o DDD.Service 
 
 # E claro, além de criar, vamos referencià-la também à nossa solução, com o comando
 dotnet sln DDD.sln add DDD.Service/DDD.Service.csproj
